@@ -96,15 +96,17 @@ No backend, Python server, or installation required!
 
 ---
 
-## 📜 License
-
-This enterprise platform is released under the [MIT License](LICENSE).# 📸 Screenshots
-
 ## Home Page
-![Home](assets/screenshots/image1.png)
+![Home](assets/screenshot/Screenshot%202026-07-22%20155421.png)
 
 ## Dashboard
-![Dashboard](assets/screenshots/image2.png)
+![Dashboard](assets/screenshot/Screenshot%202026-07-22%20155457.png)
+
+## Sales Prediction
+![Sales Prediction](assets/screenshot/Screenshot%202026-07-22%20155529.png)
+
+## Analytics
+![Analytics](assets/screenshot/Screenshot%202026-07-22%20155602.png)
 
 ## Sales Prediction
 ![Sales Prediction](assets/screenshots/image3.png)
