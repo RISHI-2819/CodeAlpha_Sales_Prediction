@@ -112,4 +112,27 @@ No backend, Python server, or installation required!
 ![Sales Prediction](assets/screenshots/image3.png)
 
 ## Analytics
-![Analytics](assets/screenshots/image4.png)
+![Analytics](assets/screenshots/image4.png) 
+
+## 🛠️ Tech Stack
+
+- HTML5
+- CSS3
+- JavaScript
+- Python
+- Flask
+- Pandas
+- NumPy
+- Scikit-learn
+- Chart.js
+- 
+## ✨ Features
+
+- 📊 Sales Dashboard
+- 🤖 AI Sales Prediction
+- 📈 Revenue Analytics
+- 🛒 Product Management
+- 👥 Customer Analytics
+- 📦 Inventory Management
+- 📤 CSV Export
+- 🌙 Dark/Light Mode
