@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📈 AI Business Intelligence & Sales Analytics Platform</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <!-- PapaParse for CSV Parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Fullscreen App Loader -->
+    <div id="appLoading" style="display: flex;">
+        <div class="spinner-glow mb-3"></div>
+        <h5 class="fw-bold text-light mb-1">Loading AI Intelligence Engine...</h5>
+        <p class="text-secondary small mb-0">Initializing datasets (Products, Customers, Orders, Inventory, ML Models)</p>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" class="position-fixed bottom-0 end-0 p-3" style="z-index: 11000;"></div>
+
+    <!-- Login UI Overlay -->
+    <div id="loginOverlay" style="display: none;">
+        <div class="login-card text-center">
+            <div class="kpi-icon-box bg-primary bg-opacity-20 text-primary mx-auto mb-3" style="width: 64px; height: 64px; font-size: 2rem;">
+                <i class="bi bi-graph-up-arrow"></i>
+            </div>
+            <h3 class="fw-bold mb-1 brand-title">Enterprise SalesAI</h3>
+            <p class="text-secondary fs-7 mb-4">Business Intelligence & Sales Analytics SaaS</p>
+            
+            <form id="loginForm">
+                <div class="mb-3 text-start">
+                    <label class="form-label fs-7 fw-semibold text-secondary">Username</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-dark border-secondary text-secondary"><i class="bi bi-person"></i></span>
+                        <input type="text" class="form-control" id="loginUser" value="admin" required placeholder="Enter username">
+                    </div>
+                </div>
+                
+                <div class="mb-3 text-start">
+                    <label class="form-label fs-7 fw-semibold text-secondary">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text bg-dark border-secondary text-secondary"><i class="bi bi-lock"></i></span>
+                        <input type="password" class="form-control" id="loginPass" value="admin123" required placeholder="Enter password">
+                        <button class="btn btn-outline-secondary" type="button" id="togglePassBtn"><i class="bi bi-eye"></i></button>
+                    </div>
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center mb-4 fs-7">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="rememberMe" checked>
+                        <label class="form-check-label text-secondary" for="rememberMe">Remember me</label>
+                    </div>
+                    <a href="#" id="forgotPassLink" class="text-primary text-decoration-none fw-semibold">Forgot Password?</a>
+                </div>
+                
+                <button type="submit" class="btn btn-primary-gradient w-100 py-2.5 fs-6 fw-bold">
+                    <i class="bi bi-box-arrow-in-right me-1"></i> Launch Business Dashboard
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand brand-title d-flex align-items-center gap-2" href="#">
+                <i class="bi bi-graph-up-arrow"></i> <span data-i18n="nav_brand">AI Business Intelligence</span>
+            </a>
+            
+            <!-- Live Clock & Date Widget -->
+            <div class="d-none d-md-flex align-items-center gap-3 px-3 py-1 bg-dark bg-opacity-40 rounded-pill border border-secondary border-opacity-25 fs-7">
+                <span class="text-primary"><i class="bi bi-calendar3 me-1"></i> <span id="liveDate">Jul 22, 2026</span></span>
+                <span class="text-secondary">|</span>
+                <span class="text-success font-monospace"><i class="bi bi-clock me-1"></i> <span id="liveClock">15:30:00</span></span>
+            </div>
+
+            <!-- Right Nav Utility Controls -->
+            <div class="d-flex align-items-center gap-2">
+                <!-- Search Input -->
+                <div class="input-group input-group-sm d-none d-lg-flex" style="width: 220px;">
+                    <span class="input-group-text bg-dark border-secondary text-secondary"><i class="bi bi-search"></i></span>
+                    <input type="text" id="globalSearch" class="form-control" placeholder="Search analytics...">
+                </div>
+
+                <!-- Language Switcher -->
+                <select id="langSelect" class="form-select form-select-sm bg-dark text-light border-secondary" style="width: auto;">
+                    <option value="en">English (EN)</option>
+                    <option value="ta">தமிழ் (TA)</option>
+                </select>
+
+                <!-- Theme Switcher -->
+                <button id="themeToggle" class="btn btn-outline-light btn-sm rounded-circle" style="width: 38px; height: 38px;">
+                    <i id="themeIcon" class="bi bi-sun-fill"></i>
+                </button>
+
+                <!-- Export CSV -->
+                <button id="exportCsvBtn" class="btn btn-outline-success btn-sm fw-semibold d-none d-sm-inline-flex align-items-center">
+                    <i class="bi bi-download me-1"></i> Export CSV
+                </button>
+
+                <!-- Print Dashboard -->
+                <button id="printBtn" class="btn btn-outline-info btn-sm fw-semibold d-none d-sm-inline-flex align-items-center">
+                    <i class="bi bi-printer me-1"></i> Print
+                </button>
+
+                <!-- User Account / Logout -->
+                <div class="dropdown ms-1">
+                    <button class="btn btn-dark btn-sm rounded-pill dropdown-toggle d-flex align-items-center gap-1" type="button" data-bs-toggle="dropdown">
+                        <i class="bi bi-person-circle text-primary"></i> <span id="activeUserLabel">Admin</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+                        <li><a class="dropdown-item fs-7" href="#" id="navAdminBtn"><i class="bi bi-gear me-2"></i> Admin Product Manager</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item fs-7 text-danger" href="#" id="logoutBtn"><i class="bi bi-box-arrow-right me-2"></i> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Workspace Layout -->
+    <div class="container-fluid px-0">
+        <div class="row g-0">
+
+            <!-- Sidebar Navigation -->
+            <div class="col-lg-2 sidebar-wrapper d-none d-lg-block">
+                <nav class="nav flex-column">
+                    <a class="sidebar-link active" href="#" data-section="sec-overview">
+                        <i class="bi bi-speedometer2"></i> <span data-i18n="nav_overview">Overview</span>
+                    </a>
+                    <a class="sidebar-link" href="#" data-section="sec-products">
+                        <i class="bi bi-box-seam"></i> <span data-i18n="nav_products">Product Catalog (100)</span>
+                    </a>
+                    <a class="sidebar-link" href="#" data-section="sec-customers">
+                        <i class="bi bi-people"></i> <span data-i18n="nav_customers">Customer Analytics (200)</span>
+                    </a>
+                    <a class="sidebar-link" href="#" data-section="sec-orders">
+                        <i class="bi bi-cart-check"></i> <span data-i18n="nav_orders">Orders Management</span>
+                    </a>
+                    <a class="sidebar-link" href="#" data-section="sec-predictor">
+                        <i class="bi bi-cpu"></i> <span data-i18n="nav_predictor">AI Sales Predictor</span>
+                    </a>
+                    <a class="sidebar-link" href="#" data-section="sec-advisor">
+                        <i class="bi bi-lightbulb"></i> <span data-i18n="nav_advisor">AI Business Advisor</span>
+                    </a>
+                    <a class="sidebar-link" href="#" data-section="sec-inventory">
+                        <i class="bi bi-building"></i> <span data-i18n="nav_inventory">Inventory Analytics</span>
+                    </a>
+                    <a class="sidebar-link" href="#" data-section="sec-marketing">
+                        <i class="bi bi-megaphone"></i> <span data-i18n="nav_marketing">Marketing Analytics</span>
+                    </a>
+                    <a class="sidebar-link" href="#" data-section="sec-finance">
+                        <i class="bi bi-cash-coin"></i> <span data-i18n="nav_finance">Financial Accounting</span>
+                    </a>
+                    <a class="sidebar-link" href="#" data-section="sec-reports">
+                        <i class="bi bi-file-earmark-bar-graph"></i> <span data-i18n="nav_reports">Executive Reports</span>
+                    </a>
+                </nav>
+
+                <div class="mt-4 p-3 glass-card text-center" style="border-color: rgba(99,102,241,0.25);">
+                    <i class="bi bi-shield-check text-success fs-3 mb-2 d-block"></i>
+                    <h6 class="fw-bold mb-1 fs-7">Enterprise Engine</h6>
+                    <span class="fs-8 text-secondary d-block">Client-Side ML & LocalStorage DB</span>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="col-lg-10 p-4">
+
+                <!-- SECTION 1: OVERVIEW DASHBOARD -->
+                <section id="sec-overview" class="app-section">
+                    <!-- Top KPI Cards -->
+                    <div class="row g-3 mb-4">
+                        <div class="col-xl-3 col-md-6">
+                            <div class="glass-card kpi-card">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-secondary fw-semibold fs-7">Today's Sales</span>
+                                    <div class="kpi-icon-box bg-primary bg-opacity-20 text-primary"><i class="bi bi-graph-up"></i></div>
+                                </div>
+                                <div id="kpi_today_sales" class="kpi-value-text text-primary">$18.5k</div>
+                                <span class="fs-8 text-success"><i class="bi bi-arrow-up-right me-1"></i>+14.2% vs target</span>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6">
+                            <div class="glass-card kpi-card">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-secondary fw-semibold fs-7">Total Revenue</span>
+                                    <div class="kpi-icon-box bg-success bg-opacity-20 text-success"><i class="bi bi-currency-dollar"></i></div>
+                                </div>
+                                <div id="kpi_revenue" class="kpi-value-text text-success">$3.82M</div>
+                                <span class="fs-8 text-muted">Current Fiscal Year</span>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6">
+                            <div class="glass-card kpi-card">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-secondary fw-semibold fs-7">Net Profit Margin</span>
+                                    <div class="kpi-icon-box bg-warning bg-opacity-20 text-warning"><i class="bi bi-pie-chart-fill"></i></div>
+                                </div>
+                                <div id="kpi_profit" class="kpi-value-text text-warning">$1.45M (38.0%)</div>
+                                <span class="fs-8 text-success"><i class="bi bi-check-circle me-1"></i>Healthy ROI Score</span>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-md-6">
+                            <div class="glass-card kpi-card">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="text-secondary fw-semibold fs-7">Conversion Rate</span>
+                                    <div class="kpi-icon-box bg-info bg-opacity-20 text-info"><i class="bi bi-lightning-fill"></i></div>
+                                </div>
+                                <div id="kpi_conversion" class="kpi-value-text text-info">5.12%</div>
+                                <span class="fs-8 text-secondary">Based on 200 Customers</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Charts Row 1 -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-8">
+                            <div class="glass-card">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h6 class="fw-bold mb-0 text-secondary"><i class="bi bi-line-chart me-2 text-primary"></i> Monthly Sales & Revenue Trend (12 Months)</h6>
+                                    <span class="badge bg-primary bg-opacity-20 text-primary">Live Chart.js</span>
+                                </div>
+                                <canvas id="salesTrendChart" style="max-height: 310px;"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="glass-card h-100">
+                                <h6 class="fw-bold mb-3 text-secondary"><i class="bi bi-pie-chart me-2 text-success"></i> Category Sales Breakdown</h6>
+                                <canvas id="categoryPieChart" style="max-height: 270px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Advertising Heatmap Row -->
+                    <div class="row g-4">
+                        <div class="col-lg-12">
+                            <div class="glass-card">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h6 class="fw-bold mb-0 text-secondary"><i class="bi bi-grid-3x3-gap me-2 text-warning"></i> Advertising Spend vs Sales Correlation Heatmap (Plotly.js)</h6>
+                                    <span class="badge bg-warning bg-opacity-20 text-warning">Dataset: advertising.csv</span>
+                                </div>
+                                <div id="plotlyHeatmap" style="height: 320px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 2: PRODUCT MANAGEMENT (100 Products) -->
+                <section id="sec-products" class="app-section d-none">
+                    <div class="glass-card mb-4">
+                        <div class="row g-3 align-items-center">
+                            <div class="col-md-3">
+                                <label class="form-label fs-7 fw-semibold text-secondary">Search 100 Products</label>
+                                <input type="text" id="prodSearchInput" class="form-control" placeholder="Search product name or brand...">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label fs-7 fw-semibold text-secondary">Category</label>
+                                <select id="prodCategoryFilter" class="form-select">
+                                    <option value="all">All Categories</option>
+                                    <option value="Electronics">Electronics</option>
+                                    <option value="Audio & Sound">Audio & Sound</option>
+                                    <option value="Wearables">Wearables</option>
+                                    <option value="Accessories">Accessories</option>
+                                    <option value="Smart Home">Smart Home</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label fs-7 fw-semibold text-secondary">Sort By</label>
+                                <select id="prodSortFilter" class="form-select">
+                                    <option value="bestseller">Best Seller</option>
+                                    <option value="price_high">Highest Price</option>
+                                    <option value="price_low">Lowest Price</option>
+                                    <option value="most_sold">Most Units Sold</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 text-end pt-4">
+                                <button id="resetFiltersBtn" class="btn btn-outline-secondary btn-sm"><i class="bi bi-arrow-counterclockwise"></i> Reset Filters</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="row g-4 mb-4" id="productsGridContainer">
+                        <!-- Populated dynamically by script.js -->
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="d-flex justify-content-center">
+                        <ul class="pagination pagination-custom" id="productsPagination">
+                            <!-- Populated dynamically -->
+                        </ul>
+                    </nav>
+                </section>
+
+                <!-- SECTION 3: CUSTOMER ANALYTICS (200 Customers) -->
+                <section id="sec-customers" class="app-section d-none">
+                    <div class="glass-card mb-4">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="fw-bold mb-0"><i class="bi bi-people-fill text-info me-2"></i> Customer Lifetime Value & Demographic Analytics (200 Customers)</h5>
+                            <input type="text" id="custSearchInput" class="form-control form-control-sm" style="width: 240px;" placeholder="Search customer...">
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table class="table table-custom align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Location</th>
+                                        <th>Gender / Age</th>
+                                        <th>Purchases</th>
+                                        <th>Total Spend</th>
+                                        <th>CLV</th>
+                                        <th>Loyalty Tier</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="customerTableBody">
+                                    <!-- Populated by script.js -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Customer Pagination -->
+                        <nav class="d-flex justify-content-center mt-3">
+                            <ul class="pagination pagination-custom" id="customerPagination">
+                                <!-- Populated dynamically -->
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+
+                <!-- SECTION 4: ORDER MANAGEMENT -->
+                <section id="sec-orders" class="app-section d-none">
+                    <div class="glass-card mb-4">
+                        <h5 class="fw-bold mb-3"><i class="bi bi-cart-check-fill text-success me-2"></i> Order Transactions Log</h5>
+                        <div class="table-responsive">
+                            <table class="table table-custom align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Product</th>
+                                        <th>Customer</th>
+                                        <th>Date</th>
+                                        <th>Qty</th>
+                                        <th>Revenue</th>
+                                        <th>Status</th>
+                                        <th>Payment Method</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ordersTableBody">
+                                    <!-- Populated by script.js -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 5: AI SALES PREDICTOR -->
+                <section id="sec-predictor" class="app-section d-none">
+                    <div class="row g-4">
+                        <div class="col-lg-5">
+                            <div class="glass-card">
+                                <h5 class="fw-bold mb-3 d-flex align-items-center gap-2">
+                                    <i class="bi bi-cpu-fill text-primary"></i> <span>AI Sales Predictor</span>
+                                </h5>
+                                <form id="aiPredictorForm">
+                                    <div class="mb-3">
+                                        <label class="form-label fs-7 fw-semibold text-secondary">TV Advertising Spend ($k)</label>
+                                        <input type="number" step="0.1" min="0" max="500" class="form-control" id="pred_tv" value="150.0" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fs-7 fw-semibold text-secondary">Radio Advertising Spend ($k)</label>
+                                        <input type="number" step="0.1" min="0" max="500" class="form-control" id="pred_radio" value="25.0" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label fs-7 fw-semibold text-secondary">Newspaper Advertising Spend ($k)</label>
+                                        <input type="number" step="0.1" min="0" max="500" class="form-control" id="pred_newspaper" value="15.0" required>
+                                    </div>
+                                    <div class="row g-2 mb-3">
+                                        <div class="col-6">
+                                            <label class="form-label fs-7 fw-semibold text-secondary">Selling Price ($)</label>
+                                            <input type="number" step="1" class="form-control" id="pred_price" value="299">
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="form-label fs-7 fw-semibold text-secondary">Discount (%)</label>
+                                            <input type="number" step="1" class="form-control" id="pred_discount" value="10">
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary-gradient w-100 py-2.5 fw-bold">
+                                        <i class="bi bi-lightning-charge-fill me-1"></i> Predict Sales Revenue
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7">
+                            <div class="glass-card h-100 d-flex flex-column justify-content-between">
+                                <div>
+                                    <h5 class="fw-bold mb-3 d-flex align-items-center gap-2">
+                                        <i class="bi bi-lightbulb-fill text-warning"></i> AI Business Forecast Output
+                                    </h5>
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-6 col-md-3">
+                                            <div class="p-3 bg-dark bg-opacity-40 rounded-3 text-center border border-secondary border-opacity-25">
+                                                <span class="fs-8 text-secondary d-block">Predicted Sales</span>
+                                                <h4 id="out_pred_sales" class="fw-bold text-success mb-0">$18.5k</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <div class="p-3 bg-dark bg-opacity-40 rounded-3 text-center border border-secondary border-opacity-25">
+                                                <span class="fs-8 text-secondary d-block">Confidence</span>
+                                                <h4 id="out_confidence" class="fw-bold text-info mb-0">96.8%</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <div class="p-3 bg-dark bg-opacity-40 rounded-3 text-center border border-secondary border-opacity-25">
+                                                <span class="fs-8 text-secondary d-block">Est. Profit</span>
+                                                <h4 id="out_profit" class="fw-bold text-warning mb-0">$8.4k</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 col-md-3">
+                                            <div class="p-3 bg-dark bg-opacity-40 rounded-3 text-center border border-secondary border-opacity-25">
+                                                <span class="fs-8 text-secondary d-block">Net ROI</span>
+                                                <h4 id="out_roi" class="fw-bold text-primary mb-0">123.5%</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="aiAdvisorMessageBox" class="alert alert-info border-0" style="background: rgba(59, 130, 246, 0.15); color: var(--text-primary);">
+                                        <h6 class="fw-bold mb-2"><i class="bi bi-cpu-fill me-1"></i> Strategic Recommendation</h6>
+                                        <p id="aiAdviceText" class="fs-7 mb-0">Radio advertising exhibits highest marginal sales boost per budget dollar. Reallocating 15% from Newspaper to Radio is recommended.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 6: AI BUSINESS ADVISOR -->
+                <section id="sec-advisor" class="app-section d-none">
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="glass-card">
+                                <h5 class="fw-bold mb-3 text-warning"><i class="bi bi-lightbulb-fill me-2"></i> Strategic AI Growth Recommendations</h5>
+                                <div class="p-3 bg-dark bg-opacity-40 rounded-3 mb-3 border border-secondary border-opacity-25">
+                                    <h6 class="fw-bold text-primary mb-1">Increase TV & Radio Allocation</h6>
+                                    <p class="fs-7 text-secondary mb-0">TV and Radio media synergies generate +24% higher ROI than standalone print advertising. Shift 12% from Newspaper to TV.</p>
+                                </div>
+                                <div class="p-3 bg-dark bg-opacity-40 rounded-3 mb-3 border border-secondary border-opacity-25">
+                                    <h6 class="fw-bold text-success mb-1">Promote High Margin Wearables</h6>
+                                    <p class="fs-7 text-secondary mb-0">Wearables category delivers 48.5% net profit margin. Run targeted email marketing for premium smartwatch models.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="glass-card">
+                                <h5 class="fw-bold mb-3 text-info"><i class="bi bi-speedometer me-2"></i> Business Health Score</h5>
+                                <div class="text-center py-3">
+                                    <h1 class="display-3 fw-bold text-success">94 / 100</h1>
+                                    <p class="text-secondary">Excellent Financial Growth & Inventory Efficiency</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 7: INVENTORY & WAREHOUSE -->
+                <section id="sec-inventory" class="app-section d-none">
+                    <div class="glass-card mb-4">
+                        <h5 class="fw-bold mb-3"><i class="bi bi-building me-2 text-warning"></i> Warehouse Inventory Status</h5>
+                        <div class="table-responsive">
+                            <table class="table table-custom align-middle">
+                                <thead>
+                                    <tr>
+                                        <th>Product ID</th>
+                                        <th>Product Name</th>
+                                        <th>Category</th>
+                                        <th>Warehouse</th>
+                                        <th>Stock Qty</th>
+                                        <th>Inventory Value</th>
+                                        <th>Velocity</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="inventoryTableBody">
+                                    <!-- Populated by script.js -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 8: MARKETING ANALYTICS -->
+                <section id="sec-marketing" class="app-section d-none">
+                    <div class="row g-4 mb-4">
+                        <div class="col-lg-6">
+                            <div class="glass-card">
+                                <h6 class="fw-bold mb-3 text-secondary">Campaign ROI Comparison</h6>
+                                <canvas id="marketingRoiChart" style="max-height: 280px;"></canvas>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="glass-card">
+                                <h6 class="fw-bold mb-3 text-secondary">Ad Channel Breakdown</h6>
+                                <canvas id="marketingChannelChart" style="max-height: 280px;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 9: FINANCIAL ACCOUNTING -->
+                <section id="sec-finance" class="app-section d-none">
+                    <div class="glass-card mb-4">
+                        <h5 class="fw-bold mb-3"><i class="bi bi-cash-coin me-2 text-success"></i> Financial Statement Overview</h5>
+                        <div class="row text-center g-3">
+                            <div class="col-md-3">
+                                <span class="fs-8 text-secondary d-block">Gross Revenue</span>
+                                <h3 class="fw-bold text-primary">$3.82M</h3>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="fs-8 text-secondary d-block">Operating Cost</span>
+                                <h3 class="fw-bold text-rose" style="color: #f43f5e;">$2.37M</h3>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="fs-8 text-secondary d-block">Net Profit</span>
+                                <h3 class="fw-bold text-success">$1.45M</h3>
+                            </div>
+                            <div class="col-md-3">
+                                <span class="fs-8 text-secondary d-block">Profit Margin</span>
+                                <h3 class="fw-bold text-warning">38.0%</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 10: EXECUTIVE REPORTS -->
+                <section id="sec-reports" class="app-section d-none">
+                    <div class="glass-card mb-4 text-center py-5">
+                        <i class="bi bi-file-earmark-bar-graph text-primary display-4 mb-3 d-block"></i>
+                        <h4 class="fw-bold mb-2">Executive Business Reports Center</h4>
+                        <p class="text-secondary mb-4">Generate and download comprehensive analytics reports in 1-click.</p>
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <button class="btn btn-emerald-gradient px-4 py-2" onclick="exportProductsToCsv()">
+                                <i class="bi bi-download me-1"></i> Products Report (CSV)
+                            </button>
+                            <button class="btn btn-primary-gradient px-4 py-2" onclick="exportCustomersToCsv()">
+                                <i class="bi bi-download me-1"></i> Customers Report (CSV)
+                            </button>
+                            <button class="btn btn-outline-light px-4 py-2" onclick="window.print()">
+                                <i class="bi bi-printer me-1"></i> Print Executive Summary
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core Script -->
+    <script src="script.js"></script>
+</body>
+</html>

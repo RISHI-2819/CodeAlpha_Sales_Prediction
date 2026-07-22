@@ -1,0 +1,1002 @@
+[
+  {
+    "product_id": "PRD-1001",
+    "product_name": "Sony Bluetooth Tracker Tags 4-Pack v3",
+    "category": "Electronics",
+    "stock_qty": 139,
+    "warehouse": "Warehouse East",
+    "inventory_value": 16892.67,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1002",
+    "product_name": "JBL Smart Robot Vacuum Cleaner v1",
+    "category": "Audio & Sound",
+    "stock_qty": 139,
+    "warehouse": "Central Distribution",
+    "inventory_value": 36020.46,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1003",
+    "product_name": "Logitech Curved Gaming Monitor 34-inch v2",
+    "category": "Accessories",
+    "stock_qty": 23,
+    "warehouse": "Central Distribution",
+    "inventory_value": 2499.18,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1004",
+    "product_name": "LG 4K Webcam with Autofocus v1",
+    "category": "Electronics",
+    "stock_qty": 75,
+    "warehouse": "Warehouse East",
+    "inventory_value": 32873.25,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1005",
+    "product_name": "Bose Foldable Drone 4K Camera v3",
+    "category": "Electronics",
+    "stock_qty": 97,
+    "warehouse": "Central Distribution",
+    "inventory_value": 43026.29,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1006",
+    "product_name": "Bose True Wireless Earbuds Max v3",
+    "category": "Wearables",
+    "stock_qty": 43,
+    "warehouse": "Warehouse East",
+    "inventory_value": 13772.47,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1007",
+    "product_name": "Bose True Wireless Earbuds Max v3",
+    "category": "Smart Home",
+    "stock_qty": 8,
+    "warehouse": "Warehouse East",
+    "inventory_value": 3053.12,
+    "restock_suggested": true,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1008",
+    "product_name": "LG Smart Thermostat Pro v4",
+    "category": "Audio & Sound",
+    "stock_qty": 143,
+    "warehouse": "Warehouse East",
+    "inventory_value": 11032.45,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1009",
+    "product_name": "Bose Spatial Audio Earbuds Pro v5",
+    "category": "Wearables",
+    "stock_qty": 39,
+    "warehouse": "Warehouse West",
+    "inventory_value": 8957.52,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1010",
+    "product_name": "Dell Smart Robot Vacuum Cleaner v4",
+    "category": "Accessories",
+    "stock_qty": 29,
+    "warehouse": "Warehouse East",
+    "inventory_value": 7109.64,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1011",
+    "product_name": "Anker High-Speed WiFi 6 Router v2",
+    "category": "Electronics",
+    "stock_qty": 67,
+    "warehouse": "Central Distribution",
+    "inventory_value": 14228.79,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1012",
+    "product_name": "Sennheiser Ergonomic Gaming Mouse v2",
+    "category": "Smart Home",
+    "stock_qty": 0,
+    "warehouse": "Warehouse West",
+    "inventory_value": 0.0,
+    "restock_suggested": true,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1013",
+    "product_name": "Sony Portable Bluetooth Speaker v5",
+    "category": "Audio & Sound",
+    "stock_qty": 17,
+    "warehouse": "Central Distribution",
+    "inventory_value": 7257.64,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1014",
+    "product_name": "Samsung Curved Gaming Monitor 34-inch v5",
+    "category": "Smart Home",
+    "stock_qty": 138,
+    "warehouse": "Central Distribution",
+    "inventory_value": 54442.38,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1015",
+    "product_name": "JBL Studio Condenser Microphone v1",
+    "category": "Accessories",
+    "stock_qty": 150,
+    "warehouse": "Central Distribution",
+    "inventory_value": 18426.0,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1016",
+    "product_name": "Apple Compact Soundbar with Subwoofer v1",
+    "category": "Audio & Sound",
+    "stock_qty": 71,
+    "warehouse": "Warehouse East",
+    "inventory_value": 27614.74,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1017",
+    "product_name": "LG Action Camera Waterproof 60FPS v4",
+    "category": "Audio & Sound",
+    "stock_qty": 90,
+    "warehouse": "Central Distribution",
+    "inventory_value": 8804.7,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1018",
+    "product_name": "Dell Bluetooth Tracker Tags 4-Pack v3",
+    "category": "Electronics",
+    "stock_qty": 48,
+    "warehouse": "Central Distribution",
+    "inventory_value": 17436.48,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1019",
+    "product_name": "Apple Studio Condenser Microphone v5",
+    "category": "Audio & Sound",
+    "stock_qty": 3,
+    "warehouse": "Central Distribution",
+    "inventory_value": 172.77,
+    "restock_suggested": true,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1020",
+    "product_name": "LG Ergonomic Gaming Mouse v4",
+    "category": "Accessories",
+    "stock_qty": 99,
+    "warehouse": "Warehouse West",
+    "inventory_value": 40348.44,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1021",
+    "product_name": "LG Spatial Audio Earbuds Pro v2",
+    "category": "Smart Home",
+    "stock_qty": 138,
+    "warehouse": "Warehouse East",
+    "inventory_value": 19881.66,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1022",
+    "product_name": "JBL RGB Mechanical Keyboard v1",
+    "category": "Smart Home",
+    "stock_qty": 17,
+    "warehouse": "Warehouse East",
+    "inventory_value": 7359.98,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1023",
+    "product_name": "Sennheiser Ultra HD Smart Projector 4K v5",
+    "category": "Smart Home",
+    "stock_qty": 133,
+    "warehouse": "Warehouse West",
+    "inventory_value": 6737.78,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1024",
+    "product_name": "Samsung True Wireless Earbuds Max v3",
+    "category": "Accessories",
+    "stock_qty": 2,
+    "warehouse": "Central Distribution",
+    "inventory_value": 427.78,
+    "restock_suggested": true,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1025",
+    "product_name": "JBL Curved Gaming Monitor 34-inch v2",
+    "category": "Audio & Sound",
+    "stock_qty": 94,
+    "warehouse": "Warehouse West",
+    "inventory_value": 39571.18,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1026",
+    "product_name": "JBL Wireless Noise-Canceling Headphones v5",
+    "category": "Smart Home",
+    "stock_qty": 67,
+    "warehouse": "Warehouse West",
+    "inventory_value": 9730.41,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1027",
+    "product_name": "Sennheiser Ergonomic Gaming Mouse v3",
+    "category": "Wearables",
+    "stock_qty": 129,
+    "warehouse": "Warehouse East",
+    "inventory_value": 13359.24,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1028",
+    "product_name": "Sony Wireless Noise-Canceling Headphones v3",
+    "category": "Wearables",
+    "stock_qty": 41,
+    "warehouse": "Warehouse East",
+    "inventory_value": 14368.04,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1029",
+    "product_name": "Apple Compact Soundbar with Subwoofer v2",
+    "category": "Electronics",
+    "stock_qty": 141,
+    "warehouse": "Warehouse West",
+    "inventory_value": 35578.53,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1030",
+    "product_name": "Bose True Wireless Earbuds Max v2",
+    "category": "Wearables",
+    "stock_qty": 104,
+    "warehouse": "Central Distribution",
+    "inventory_value": 31732.48,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1031",
+    "product_name": "Samsung Bluetooth Tracker Tags 4-Pack v3",
+    "category": "Electronics",
+    "stock_qty": 63,
+    "warehouse": "Warehouse East",
+    "inventory_value": 22386.42,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1032",
+    "product_name": "Bose Ergonomic Gaming Mouse v4",
+    "category": "Accessories",
+    "stock_qty": 57,
+    "warehouse": "Central Distribution",
+    "inventory_value": 9524.7,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1033",
+    "product_name": "Logitech Over-Ear Hi-Fi Headphones v5",
+    "category": "Wearables",
+    "stock_qty": 84,
+    "warehouse": "Warehouse East",
+    "inventory_value": 15864.24,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1034",
+    "product_name": "Apple Smart Robot Vacuum Cleaner v4",
+    "category": "Electronics",
+    "stock_qty": 130,
+    "warehouse": "Central Distribution",
+    "inventory_value": 21498.1,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1035",
+    "product_name": "Sony Smart LED Desk Lamp v5",
+    "category": "Accessories",
+    "stock_qty": 50,
+    "warehouse": "Central Distribution",
+    "inventory_value": 15689.0,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1036",
+    "product_name": "Anker Smart LED Desk Lamp v3",
+    "category": "Electronics",
+    "stock_qty": 75,
+    "warehouse": "Central Distribution",
+    "inventory_value": 22882.5,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1037",
+    "product_name": "Sennheiser Smart Security Camera 1080p v4",
+    "category": "Smart Home",
+    "stock_qty": 53,
+    "warehouse": "Warehouse West",
+    "inventory_value": 13427.55,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1038",
+    "product_name": "Bose Smart LED Desk Lamp v4",
+    "category": "Accessories",
+    "stock_qty": 43,
+    "warehouse": "Warehouse East",
+    "inventory_value": 15491.61,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1039",
+    "product_name": "Anker Portable Bluetooth Speaker v2",
+    "category": "Audio & Sound",
+    "stock_qty": 18,
+    "warehouse": "Central Distribution",
+    "inventory_value": 1423.8,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1040",
+    "product_name": "Dell Portable Bluetooth Speaker v2",
+    "category": "Accessories",
+    "stock_qty": 108,
+    "warehouse": "Central Distribution",
+    "inventory_value": 32442.12,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1041",
+    "product_name": "Bose Mechanical Wireless Numpad v1",
+    "category": "Smart Home",
+    "stock_qty": 135,
+    "warehouse": "Warehouse West",
+    "inventory_value": 28830.6,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1042",
+    "product_name": "JBL Studio Condenser Microphone v2",
+    "category": "Accessories",
+    "stock_qty": 63,
+    "warehouse": "Warehouse West",
+    "inventory_value": 21324.87,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1043",
+    "product_name": "LG Smart Fitness Watch Ultra v3",
+    "category": "Wearables",
+    "stock_qty": 20,
+    "warehouse": "Central Distribution",
+    "inventory_value": 2340.0,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1044",
+    "product_name": "Dell High-Speed WiFi 6 Router v3",
+    "category": "Electronics",
+    "stock_qty": 107,
+    "warehouse": "Central Distribution",
+    "inventory_value": 26861.28,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1045",
+    "product_name": "Sony Active Noise Canceling Earphones v3",
+    "category": "Accessories",
+    "stock_qty": 137,
+    "warehouse": "Warehouse East",
+    "inventory_value": 46958.12,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1046",
+    "product_name": "Anker High-Speed WiFi 6 Router v4",
+    "category": "Audio & Sound",
+    "stock_qty": 103,
+    "warehouse": "Warehouse East",
+    "inventory_value": 2845.89,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1047",
+    "product_name": "Dell Portable SSD Storage 1TB v5",
+    "category": "Electronics",
+    "stock_qty": 34,
+    "warehouse": "Warehouse West",
+    "inventory_value": 10315.6,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1048",
+    "product_name": "Logitech USB-C Multi-Port Hub v4",
+    "category": "Accessories",
+    "stock_qty": 64,
+    "warehouse": "Warehouse West",
+    "inventory_value": 8706.56,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1049",
+    "product_name": "Apple Foldable Drone 4K Camera v1",
+    "category": "Audio & Sound",
+    "stock_qty": 5,
+    "warehouse": "Warehouse East",
+    "inventory_value": 1715.45,
+    "restock_suggested": true,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1050",
+    "product_name": "Bose Studio Condenser Microphone v3",
+    "category": "Smart Home",
+    "stock_qty": 29,
+    "warehouse": "Warehouse East",
+    "inventory_value": 10109.4,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1051",
+    "product_name": "Sennheiser True Wireless Earbuds Max v4",
+    "category": "Wearables",
+    "stock_qty": 62,
+    "warehouse": "Warehouse East",
+    "inventory_value": 11627.48,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1052",
+    "product_name": "JBL High-Speed WiFi 6 Router v3",
+    "category": "Wearables",
+    "stock_qty": 107,
+    "warehouse": "Warehouse East",
+    "inventory_value": 4815.0,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1053",
+    "product_name": "Samsung Bluetooth Tracker Tags 4-Pack v5",
+    "category": "Accessories",
+    "stock_qty": 123,
+    "warehouse": "Central Distribution",
+    "inventory_value": 53502.54,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1054",
+    "product_name": "Apple Curved Gaming Monitor 34-inch v4",
+    "category": "Audio & Sound",
+    "stock_qty": 97,
+    "warehouse": "Central Distribution",
+    "inventory_value": 11744.76,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1055",
+    "product_name": "Logitech Action Camera Waterproof 60FPS v3",
+    "category": "Audio & Sound",
+    "stock_qty": 70,
+    "warehouse": "Central Distribution",
+    "inventory_value": 11413.5,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1056",
+    "product_name": "JBL Foldable Drone 4K Camera v2",
+    "category": "Accessories",
+    "stock_qty": 114,
+    "warehouse": "Warehouse West",
+    "inventory_value": 35957.88,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1057",
+    "product_name": "Sennheiser Active Noise Canceling Earphones v4",
+    "category": "Wearables",
+    "stock_qty": 140,
+    "warehouse": "Warehouse East",
+    "inventory_value": 35806.4,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1058",
+    "product_name": "Apple Bluetooth Tracker Tags 4-Pack v2",
+    "category": "Audio & Sound",
+    "stock_qty": 47,
+    "warehouse": "Central Distribution",
+    "inventory_value": 7156.22,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1059",
+    "product_name": "Anker Dual Wireless Charging Pad v2",
+    "category": "Smart Home",
+    "stock_qty": 3,
+    "warehouse": "Warehouse East",
+    "inventory_value": 431.61,
+    "restock_suggested": true,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1060",
+    "product_name": "Samsung Over-Ear Hi-Fi Headphones v4",
+    "category": "Wearables",
+    "stock_qty": 120,
+    "warehouse": "Warehouse East",
+    "inventory_value": 7155.6,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1061",
+    "product_name": "Apple Smart Thermostat Pro v4",
+    "category": "Electronics",
+    "stock_qty": 38,
+    "warehouse": "Warehouse West",
+    "inventory_value": 1794.74,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1062",
+    "product_name": "Dell Smart Robot Vacuum Cleaner v5",
+    "category": "Smart Home",
+    "stock_qty": 97,
+    "warehouse": "Central Distribution",
+    "inventory_value": 34820.09,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1063",
+    "product_name": "Sennheiser Ultra HD Smart Projector 4K v5",
+    "category": "Smart Home",
+    "stock_qty": 54,
+    "warehouse": "Central Distribution",
+    "inventory_value": 23363.1,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1064",
+    "product_name": "Samsung Wireless Noise-Canceling Headphones v4",
+    "category": "Electronics",
+    "stock_qty": 8,
+    "warehouse": "Warehouse East",
+    "inventory_value": 1687.76,
+    "restock_suggested": true,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1065",
+    "product_name": "Sennheiser True Wireless Earbuds Max v2",
+    "category": "Wearables",
+    "stock_qty": 38,
+    "warehouse": "Central Distribution",
+    "inventory_value": 7597.72,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1066",
+    "product_name": "Sennheiser Mechanical Wireless Numpad v3",
+    "category": "Smart Home",
+    "stock_qty": 103,
+    "warehouse": "Central Distribution",
+    "inventory_value": 21221.09,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1067",
+    "product_name": "Logitech Smart Robot Vacuum Cleaner v3",
+    "category": "Accessories",
+    "stock_qty": 147,
+    "warehouse": "Warehouse East",
+    "inventory_value": 3858.75,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1068",
+    "product_name": "LG Smart LED Desk Lamp v4",
+    "category": "Audio & Sound",
+    "stock_qty": 111,
+    "warehouse": "Warehouse East",
+    "inventory_value": 45897.39,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1069",
+    "product_name": "Logitech True Wireless Earbuds Max v1",
+    "category": "Wearables",
+    "stock_qty": 126,
+    "warehouse": "Warehouse West",
+    "inventory_value": 48901.86,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1070",
+    "product_name": "Logitech Curved Gaming Monitor 34-inch v3",
+    "category": "Electronics",
+    "stock_qty": 0,
+    "warehouse": "Central Distribution",
+    "inventory_value": 0.0,
+    "restock_suggested": true,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1071",
+    "product_name": "Logitech Smart Robot Vacuum Cleaner v4",
+    "category": "Smart Home",
+    "stock_qty": 68,
+    "warehouse": "Warehouse East",
+    "inventory_value": 19519.4,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1072",
+    "product_name": "Sony Over-Ear Hi-Fi Headphones v5",
+    "category": "Electronics",
+    "stock_qty": 141,
+    "warehouse": "Central Distribution",
+    "inventory_value": 51140.7,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1073",
+    "product_name": "Samsung Wireless Graphics Drawing Tablet v3",
+    "category": "Electronics",
+    "stock_qty": 120,
+    "warehouse": "Central Distribution",
+    "inventory_value": 28363.2,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1074",
+    "product_name": "Apple Curved Gaming Monitor 34-inch v4",
+    "category": "Audio & Sound",
+    "stock_qty": 0,
+    "warehouse": "Warehouse East",
+    "inventory_value": 0.0,
+    "restock_suggested": true,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1075",
+    "product_name": "LG 4K Webcam with Autofocus v4",
+    "category": "Audio & Sound",
+    "stock_qty": 96,
+    "warehouse": "Central Distribution",
+    "inventory_value": 15852.48,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1076",
+    "product_name": "Dell Ultra HD Smart Projector 4K v3",
+    "category": "Audio & Sound",
+    "stock_qty": 98,
+    "warehouse": "Central Distribution",
+    "inventory_value": 33217.1,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1077",
+    "product_name": "JBL Portable SSD Storage 1TB v3",
+    "category": "Audio & Sound",
+    "stock_qty": 25,
+    "warehouse": "Warehouse West",
+    "inventory_value": 9833.0,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1078",
+    "product_name": "LG Action Camera Waterproof 60FPS v3",
+    "category": "Electronics",
+    "stock_qty": 20,
+    "warehouse": "Central Distribution",
+    "inventory_value": 3245.4,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1079",
+    "product_name": "Sony Smart Robot Vacuum Cleaner v1",
+    "category": "Smart Home",
+    "stock_qty": 58,
+    "warehouse": "Warehouse West",
+    "inventory_value": 6793.54,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1080",
+    "product_name": "Sony Ultra HD Smart Projector 4K v3",
+    "category": "Wearables",
+    "stock_qty": 110,
+    "warehouse": "Warehouse West",
+    "inventory_value": 39745.2,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1081",
+    "product_name": "Samsung Smart Fitness Watch Ultra v5",
+    "category": "Audio & Sound",
+    "stock_qty": 127,
+    "warehouse": "Warehouse East",
+    "inventory_value": 50015.14,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1082",
+    "product_name": "LG Compact Soundbar with Subwoofer v3",
+    "category": "Electronics",
+    "stock_qty": 88,
+    "warehouse": "Central Distribution",
+    "inventory_value": 27258.88,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1083",
+    "product_name": "Dell Universal Laptop Power Bank v4",
+    "category": "Audio & Sound",
+    "stock_qty": 147,
+    "warehouse": "Central Distribution",
+    "inventory_value": 9024.33,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1084",
+    "product_name": "Sony Portable SSD Storage 1TB v1",
+    "category": "Wearables",
+    "stock_qty": 58,
+    "warehouse": "Warehouse West",
+    "inventory_value": 23844.96,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1085",
+    "product_name": "Apple Compact Soundbar with Subwoofer v1",
+    "category": "Audio & Sound",
+    "stock_qty": 93,
+    "warehouse": "Warehouse East",
+    "inventory_value": 13893.27,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1086",
+    "product_name": "Bose Spatial Audio Earbuds Pro v5",
+    "category": "Audio & Sound",
+    "stock_qty": 69,
+    "warehouse": "Warehouse West",
+    "inventory_value": 27341.94,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1087",
+    "product_name": "LG Smart Fitness Watch Ultra v2",
+    "category": "Electronics",
+    "stock_qty": 101,
+    "warehouse": "Warehouse West",
+    "inventory_value": 34649.06,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1088",
+    "product_name": "Apple Studio Condenser Microphone v3",
+    "category": "Smart Home",
+    "stock_qty": 97,
+    "warehouse": "Warehouse West",
+    "inventory_value": 29844.96,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1089",
+    "product_name": "JBL USB-C Multi-Port Hub v5",
+    "category": "Smart Home",
+    "stock_qty": 77,
+    "warehouse": "Central Distribution",
+    "inventory_value": 8569.33,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1090",
+    "product_name": "Apple Dual Wireless Charging Pad v2",
+    "category": "Accessories",
+    "stock_qty": 94,
+    "warehouse": "Central Distribution",
+    "inventory_value": 37690.24,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1091",
+    "product_name": "Apple Smart Plug Surge Protector v4",
+    "category": "Accessories",
+    "stock_qty": 8,
+    "warehouse": "Central Distribution",
+    "inventory_value": 2262.48,
+    "restock_suggested": true,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1092",
+    "product_name": "Logitech 4K Webcam with Autofocus v3",
+    "category": "Electronics",
+    "stock_qty": 116,
+    "warehouse": "Central Distribution",
+    "inventory_value": 4795.44,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1093",
+    "product_name": "Bose Spatial Audio Earbuds Pro v5",
+    "category": "Wearables",
+    "stock_qty": 53,
+    "warehouse": "Warehouse East",
+    "inventory_value": 5525.78,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1094",
+    "product_name": "Samsung Spatial Audio Earbuds Pro v5",
+    "category": "Wearables",
+    "stock_qty": 6,
+    "warehouse": "Warehouse West",
+    "inventory_value": 744.18,
+    "restock_suggested": true,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1095",
+    "product_name": "Samsung Curved Gaming Monitor 34-inch v1",
+    "category": "Electronics",
+    "stock_qty": 16,
+    "warehouse": "Warehouse East",
+    "inventory_value": 1122.24,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1096",
+    "product_name": "JBL Portable Bluetooth Speaker v5",
+    "category": "Accessories",
+    "stock_qty": 133,
+    "warehouse": "Warehouse West",
+    "inventory_value": 4503.38,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1097",
+    "product_name": "Apple Wireless Graphics Drawing Tablet v4",
+    "category": "Accessories",
+    "stock_qty": 37,
+    "warehouse": "Warehouse West",
+    "inventory_value": 1737.89,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  },
+  {
+    "product_id": "PRD-1098",
+    "product_name": "Sennheiser Smart LED Desk Lamp v3",
+    "category": "Accessories",
+    "stock_qty": 29,
+    "warehouse": "Warehouse East",
+    "inventory_value": 6158.73,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1099",
+    "product_name": "LG Compact Soundbar with Subwoofer v2",
+    "category": "Accessories",
+    "stock_qty": 106,
+    "warehouse": "Warehouse East",
+    "inventory_value": 20671.06,
+    "restock_suggested": false,
+    "velocity": "Fast Moving"
+  },
+  {
+    "product_id": "PRD-1100",
+    "product_name": "Samsung True Wireless Earbuds Max v4",
+    "category": "Wearables",
+    "stock_qty": 110,
+    "warehouse": "Warehouse West",
+    "inventory_value": 4862.0,
+    "restock_suggested": false,
+    "velocity": "Standard Moving"
+  }
+]
